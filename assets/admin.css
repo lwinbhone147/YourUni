@@ -1,0 +1,514 @@
+/* Shared admin workspace styling: aligned with YourUni's ink, paper, and green visual system. */
+:root {
+    --admin-ink: #20201d;
+    --admin-paper: #fffaf0;
+    --admin-green: #317b58;
+    --admin-yellow: #f2c84b;
+    --admin-red: #d9432e;
+    --admin-line: #ded5c3;
+    --admin-surface: #fffdf7;
+    --admin-muted: #625e54;
+}
+
+html body.admin-dashboard-page,
+html body.admin-accounts-page,
+html body.admin-password-page,
+html body.admin-login-page,
+html body.setup-page {
+    background: var(--admin-paper);
+    color: var(--admin-ink);
+    font-family: 'Plus Jakarta Sans', 'Trebuchet MS', sans-serif;
+}
+
+body.admin-dashboard-page .shell,
+body.admin-accounts-page .admin-page,
+body.admin-password-page .wrap {
+    max-width: 1500px;
+}
+
+body.admin-dashboard-page .shell {
+    margin-top: 20px;
+}
+
+body.admin-dashboard-page .header,
+body.admin-accounts-page .topbar {
+    border: 2px solid var(--admin-ink);
+    border-bottom: 5px solid var(--admin-yellow);
+    border-radius: 3px;
+    background: #211f1a;
+    box-shadow: 5px 5px 0 #e7dcc6;
+}
+
+body.admin-dashboard-page .brand-icon,
+body.admin-accounts-page .logo {
+    border-radius: 3px;
+    background: var(--admin-green);
+}
+
+body.admin-dashboard-page .header h1 span {
+    color: var(--admin-yellow);
+}
+
+body.admin-dashboard-page .header-actions a {
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 3px;
+    background: var(--admin-green);
+}
+
+body.admin-dashboard-page .header-actions a.logout {
+    background: #8f3025;
+}
+
+body.admin-dashboard-page .stat,
+body.admin-dashboard-page .panel,
+body.admin-accounts-page .panel,
+body.admin-password-page .panel,
+body.admin-login-page .login-card,
+body.setup-page .setup-card {
+    border: 1px solid var(--admin-line);
+    border-radius: 3px;
+    background: var(--admin-surface);
+    box-shadow: 3px 3px 0 #e7dcc6;
+}
+
+body.admin-dashboard-page .stat strong {
+    color: var(--admin-green);
+}
+
+body.admin-dashboard-page .tabs {
+    gap: 5px;
+    border: 1px solid var(--admin-line);
+    border-radius: 3px;
+    background: #efe9dc;
+}
+
+body.admin-dashboard-page .tabs a {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #514d44;
+}
+
+body.admin-dashboard-page .tabs a.active {
+    border-color: var(--admin-ink);
+    border-radius: 2px;
+    background: var(--admin-ink);
+    color: #fffdf7;
+    box-shadow: none;
+}
+
+body.admin-dashboard-page .panel-head,
+body.admin-accounts-page .panel-head {
+    border-color: var(--admin-line);
+    background: #f6f0e4;
+}
+
+body.admin-dashboard-page .panel-head p,
+body.admin-dashboard-page .helper,
+body.admin-dashboard-page .tip,
+body.admin-accounts-page .muted,
+body.admin-accounts-page .help,
+body.admin-password-page .muted,
+body.admin-password-page .note {
+    color: var(--admin-muted);
+}
+
+body.admin-dashboard-page .field label,
+body.admin-accounts-page .field label,
+body.admin-password-page .field label {
+    color: var(--admin-ink);
+}
+
+body.admin-dashboard-page input,
+body.admin-dashboard-page select,
+body.admin-dashboard-page textarea,
+body.admin-accounts-page input,
+body.admin-password-page input,
+body.admin-login-page .field input {
+    border-color: #cfc5b2;
+    border-radius: 3px;
+    background: #fffdf7;
+    color: var(--admin-ink);
+}
+
+body.admin-dashboard-page :is(input, select, textarea):focus,
+body.admin-accounts-page input:focus,
+body.admin-password-page input:focus,
+body.admin-login-page .field input:focus {
+    border-color: var(--admin-green);
+    box-shadow: 0 0 0 3px rgba(49,123,88,.16);
+}
+
+body.admin-dashboard-page .btn,
+body.admin-accounts-page .btn,
+body.admin-password-page .btn,
+body.admin-login-page button,
+body.setup-page .setup-button {
+    border-radius: 3px;
+}
+
+body.admin-dashboard-page .btn-primary,
+body.admin-accounts-page .btn-primary,
+body.admin-password-page .btn:not(.btn-secondary),
+body.admin-login-page button {
+    border-color: var(--admin-red);
+    background: var(--admin-red);
+    color: #fff;
+}
+
+body.admin-dashboard-page .btn-primary:hover,
+body.admin-accounts-page .btn-primary:hover,
+body.admin-password-page .btn:not(.btn-secondary):hover,
+body.admin-login-page button:hover {
+    background: #b93122;
+}
+
+body.admin-dashboard-page .btn-secondary,
+body.admin-accounts-page .btn-secondary,
+body.admin-password-page .btn-secondary {
+    border: 1px solid var(--admin-line);
+    background: #f6f0e4;
+    color: var(--admin-ink);
+}
+
+body.admin-dashboard-page .btn-danger,
+body.admin-accounts-page .btn-danger {
+    border: 1px solid #e8b6ad;
+    background: #fae4df;
+    color: #842d22;
+}
+
+body.admin-dashboard-page th,
+body.admin-accounts-page th {
+    background: #f3eddf;
+    color: #625e54;
+}
+
+body.admin-dashboard-page th,
+body.admin-dashboard-page td,
+body.admin-accounts-page th,
+body.admin-accounts-page td {
+    border-color: var(--admin-line);
+}
+
+body.admin-dashboard-page tbody tr:hover,
+body.admin-accounts-page tbody tr:hover {
+    background: #f8f2e7;
+}
+
+body.admin-dashboard-page .tag,
+body.admin-accounts-page .current {
+    border-radius: 2px;
+    background: #e5f0e5;
+    color: var(--admin-green);
+}
+
+body.admin-dashboard-page .notice,
+body.admin-accounts-page .alert,
+body.admin-password-page .alert,
+body.admin-login-page .error {
+    border-radius: 3px;
+}
+
+body.admin-dashboard-page .featured-preview-wrap {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--admin-line);
+}
+
+body.admin-dashboard-page .preview-label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--admin-green);
+    font-size: .73rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+body.admin-dashboard-page .featured-preview {
+    width: min(100%, 340px);
+    overflow: hidden;
+    border: 1px solid var(--admin-line);
+    background: #fff;
+}
+
+body.admin-dashboard-page .featured-preview .card-img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+body.admin-dashboard-page .featured-preview .card-content {
+    padding: 14px;
+}
+
+body.admin-dashboard-page .featured-preview .uni-info h5 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+body.admin-dashboard-page .featured-preview .uni-info p {
+    margin: 0 0 8px;
+    color: #625e54;
+    font-size: .8rem;
+}
+
+body.admin-dashboard-page .preview-marks {
+    display: block;
+    margin-top: 8px;
+    color: #625e54;
+    font-size: .76rem;
+}
+
+body.admin-login-page {
+    background-color: var(--admin-paper);
+}
+
+body.admin-login-page .login-card {
+    width: min(100%, 420px);
+    padding: 30px;
+    box-shadow: 5px 5px 0 #e7dcc6;
+}
+
+body.admin-login-page .login-card h1 {
+    color: var(--admin-ink);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+body.admin-login-page .login-card .muted,
+body.admin-login-page .hint {
+    color: var(--admin-muted);
+}
+
+body.admin-accounts-page .admin-page,
+body.admin-password-page .wrap {
+    margin-top: 24px;
+}
+
+body.admin-accounts-page .topbar h1,
+body.admin-password-page h1 {
+    color: var(--admin-ink);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+body.admin-accounts-page .table-wrap,
+body.admin-dashboard-page .table-scroll {
+    scrollbar-color: #b9b09f transparent;
+}
+
+body.setup-page .setup-card {
+    backdrop-filter: none;
+    border-color: var(--admin-line) !important;
+    border-radius: 3px !important;
+    background: var(--admin-surface) !important;
+    box-shadow: 5px 5px 0 #e7dcc6 !important;
+}
+
+body.setup-page {
+    background: var(--admin-paper) !important;
+}
+
+body.setup-page .setup-logo {
+    border-radius: 3px !important;
+    background: var(--admin-green) !important;
+}
+
+body.setup-page .setup-brand-name span {
+    color: var(--admin-green) !important;
+}
+
+body.setup-page .setup-eyebrow {
+    border-radius: 0 !important;
+    background: var(--admin-yellow) !important;
+    color: var(--admin-ink) !important;
+    letter-spacing: 0 !important;
+}
+
+body.setup-page .setup-eyebrow-dot {
+    background: var(--admin-green) !important;
+}
+
+body.setup-page .setup-title {
+    color: var(--admin-ink) !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    letter-spacing: 0 !important;
+}
+
+body.setup-page .setup-intro,
+body.setup-page .setup-help,
+body.setup-page .setup-footer {
+    color: var(--admin-muted) !important;
+}
+
+body.setup-page .setup-notice {
+    border-radius: 3px !important;
+    background: #f6f0e4 !important;
+}
+
+body.setup-page .setup-button,
+body.setup-page a.setup-button,
+body.setup-page button.setup-button {
+    border-color: var(--admin-red) !important;
+    border-radius: 3px !important;
+    background: var(--admin-red) !important;
+    box-shadow: 3px 3px 0 var(--admin-yellow) !important;
+}
+
+body.setup-page .setup-button:hover {
+    background: #b93122 !important;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page,
+html[data-theme="dark"] body.admin-accounts-page,
+html[data-theme="dark"] body.admin-password-page,
+html[data-theme="dark"] body.admin-login-page,
+html[data-theme="dark"] body.setup-page {
+    --admin-ink: #edf4e9;
+    --admin-line: #334639;
+    --admin-surface: #111c2d;
+    --admin-muted: #bdc9bc;
+    background: #0b1220 !important;
+    color: #e5edf7 !important;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .header,
+html[data-theme="dark"] body.admin-accounts-page .topbar {
+    border-color: #91a18e;
+    border-bottom-color: #d2ae45;
+    background: #17251f;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .header-actions a {
+    background: #317b58;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .stat,
+html[data-theme="dark"] body.admin-dashboard-page .panel,
+html[data-theme="dark"] body.admin-accounts-page .panel,
+html[data-theme="dark"] body.admin-password-page .panel,
+html[data-theme="dark"] body.admin-login-page .login-card,
+html[data-theme="dark"] body.setup-page .setup-card {
+    border-color: #334639;
+    background: #111c2d;
+    color: #e5edf7;
+    box-shadow: 3px 3px 0 #1b3028;
+}
+
+html[data-theme="dark"] body.setup-page {
+    background: #0b1220 !important;
+}
+
+html[data-theme="dark"] body.setup-page .setup-logo {
+    background: #317b58 !important;
+}
+
+html[data-theme="dark"] body.setup-page .setup-brand-name span {
+    color: #9ed5b4 !important;
+}
+
+html[data-theme="dark"] body.setup-page .setup-title,
+html[data-theme="dark"] body.setup-page .setup-notice-title {
+    color: #edf4e9 !important;
+}
+
+html[data-theme="dark"] body.setup-page .setup-intro,
+html[data-theme="dark"] body.setup-page .setup-help,
+html[data-theme="dark"] body.setup-page .setup-footer {
+    color: #bdc9bc !important;
+}
+
+html[data-theme="dark"] body.setup-page .setup-notice {
+    border-color: #334639 !important;
+    background: #142337 !important;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .tabs {
+    border-color: #334639;
+    background: #0e1929;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .tabs a {
+    color: #d1dbd0;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .tabs a.active {
+    border-color: #91a18e;
+    background: #1b3028;
+    color: #e7f2e4;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .panel-head,
+html[data-theme="dark"] body.admin-accounts-page .panel-head,
+html[data-theme="dark"] body.admin-dashboard-page th,
+html[data-theme="dark"] body.admin-accounts-page th {
+    border-color: #334639;
+    background: #16251f;
+    color: #dce8da;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page :is(input, select, textarea),
+html[data-theme="dark"] body.admin-accounts-page input,
+html[data-theme="dark"] body.admin-password-page input,
+html[data-theme="dark"] body.admin-login-page .field input {
+    border-color: #405344 !important;
+    background: #0b1626 !important;
+    color: #edf4e9 !important;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .btn-secondary,
+html[data-theme="dark"] body.admin-accounts-page .btn-secondary,
+html[data-theme="dark"] body.admin-password-page .btn-secondary {
+    border-color: #405344;
+    background: #1b3028;
+    color: #e5edf7;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .btn-danger,
+html[data-theme="dark"] body.admin-accounts-page .btn-danger {
+    border-color: #713e3b;
+    background: #3a2422;
+    color: #ffd2c9;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page tbody tr:hover,
+html[data-theme="dark"] body.admin-accounts-page tbody tr:hover {
+    background: #16251f;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .featured-preview {
+    border-color: #334639;
+    background: #111c2d;
+}
+
+html[data-theme="dark"] body.admin-dashboard-page .featured-preview .uni-info p,
+html[data-theme="dark"] body.admin-dashboard-page .preview-marks {
+    color: #bdc9bc;
+}
+
+@media (max-width: 700px) {
+    body.admin-dashboard-page .header-actions,
+    body.admin-accounts-page .actions {
+        width: 100%;
+    }
+
+    body.admin-dashboard-page .header-actions a,
+    body.admin-accounts-page .actions .btn {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    body.admin-dashboard-page .featured-preview {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.admin-dashboard-page *,
+    body.admin-accounts-page *,
+    body.admin-password-page *,
+    body.admin-login-page *,
+    body.setup-page * {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}

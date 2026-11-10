@@ -1,0 +1,5 @@
+# Prevent directory listings and direct downloads of setup/database files on Apache hosts.
+Options -Indexes
+<FilesMatch "^(config\.php|db\.php|db_pdo\.php|youruni_complete\.sql|YOURUNI_README\.txt)$">
+    Require all denied
+</FilesMatch>

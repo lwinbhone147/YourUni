@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    background-image:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(30, 41, 59, 0.05),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(51, 65, 85, 0.05),
+            transparent 25%
+        );
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION BAR
+========================================================= */
+
+.pagebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    background-color: #121c2d;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 26px;
+    color: #0b5ee7;
+}
+
+.title h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.title h1 span {
+    color: #3b82f6;
+}
+
+.title p {
+    font-size: 0.75rem;
+    color: #5a6474;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #ffffff;
+    padding-bottom: 5px;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: #0b5ee7;
+}
+
+.links a.active {
+    color: #0b5ee7;
+    border-bottom: 2px solid #0b5ee7;
+}
+
+
+/* =========================================================
+   PAGE CONTAINER
+========================================================= */
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 30px 20px 80px 20px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.back-btn:hover {
+    color: #1e293b;
+    transform: translateX(-5px);
+    border-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 35px 30px;
+    background: linear-gradient(
+        135deg,
+        #1e293b 0%,
+        #334155 100%
+    );
+    border-radius: 24px;
+    color: white;
+    box-shadow: 0 15px 30px -10px rgba(30, 41, 59, 0.35);
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0)
+    );
+    border-radius: 50%;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: #f1f5f9;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   UNIVERSITY SECTION
+========================================================= */
+
+.uni-section {
+    margin-bottom: 50px;
+}
+
+.uni-tags {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(280px, 1fr)
+    );
+    gap: 15px;
+}
+
+
+/* =========================================================
+   UNIVERSITY BADGES
+========================================================= */
+
+.uni-badge {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+
+    /* Keep the badge height fixed */
+    height: 64px;
+
+    padding: 6px 16px 6px 6px;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #334155;
+
+    text-decoration: none;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+    transition: all 0.25s ease;
+}
+
+.uni-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(30, 41, 59, 0.15);
+    border-color: #334155;
+    color: #0f172a;
+}
+
+
+/* =========================================================
+   UNIVERSITY IMAGE FIX
+========================================================= */
+
+.uni-badge img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+
+/* =========================================================
+   UNIVERSITY NAME
+========================================================= */
+
+.uni-badge span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   JOB ROLES GRID
+========================================================= */
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(320px, 1fr)
+    );
+    gap: 25px;
+}
+
+
+/* =========================================================
+   JOB CARD
+========================================================= */
+
+.job-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+
+    border: 1px solid rgba(226, 232, 240, 0.8);
+
+    box-shadow:
+        0 8px 25px -10px rgba(0, 0, 0, 0.05);
+
+    transition:
+        all 0.4s cubic-bezier(
+            0.175,
+            0.885,
+            0.32,
+            1.275
+        );
+
+    position: relative;
+}
+
+.job-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #1e293b,
+        #475569
+    );
+
+    border-radius: 0 0 4px 4px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 40px -10px
+        rgba(30, 41, 59, 0.18);
+
+    border-color: #cbd5e1;
+}
+
+.job-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   JOB HEADER
+========================================================= */
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   JOB ICON
+========================================================= */
+
+.job-icon {
+    font-size: 32px;
+
+    background: #f1f5f9;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+    background: #f1f5f9;
+    color: #1e293b;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   JOB TITLE
+========================================================= */
+
+.job-card h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+
+    margin-bottom: 15px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   JOB DETAILS
+========================================================= */
+
+.job-detail {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.job-detail strong {
+    color: #64748b;
+
+    display: block;
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+
+    font-weight: 700;
+}
+
+.job-detail p {
+    color: #334155;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 868px) {
+
+    .pagebar {
+        justify-content: center;
+    }
+
+    .links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 25px 18px 60px;
+    }
+
+    .page-header {
+        padding: 30px 22px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .uni-tags {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .pagebar {
+        padding: 8px 4%;
+    }
+
+    .homepage {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .links {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .links a {
+        font-size: 0.85rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .uni-badge {
+        height: auto;
+        min-height: 64px;
+    }
+
+    .uni-badge span {
+        white-space: normal;
+    }
+
+    .job-card {
+        padding: 24px;
+    }
+}

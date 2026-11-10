@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about YourUni, a platform designed to help students explore Myanmar's universities, study fields, and educational pathways.">
+    <title>About YourUni | Explore Myanmar's Universities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--about-ink:#121c2d;--about-muted:#64748b;--about-blue:#2563eb;--about-border:#e2e8f0;--about-soft:#f8fafc;--about-card:#fff}
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--about-ink);background:var(--about-soft);line-height:1.7}
+        a{text-decoration:none;color:inherit}
+        /* Navigation matches the rest of YourUni (Home and Opportunities). */
+        .pagebar{display:flex;justify-content:space-between;align-items:center;padding:5px 5%;background-color:#121c2d;flex-wrap:wrap;gap:15px;position:relative;z-index:2;font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+        .brand-link{display:block;color:inherit;text-decoration:none}
+        .homepage{display:flex;align-items:center;gap:10px}
+        .logo{font-size:26px;color:#0b5ee7}
+        .title h1{font-size:1.3rem;font-weight:700;color:#fff}
+        .title h1 span{color:#3b82f6}
+        .title p{font-size:.75rem;color:#5a6474}
+        .links{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+        .links a{font-weight:500;font-size:.95rem;color:#fff;padding-bottom:5px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+        .links a:hover{color:#0b5ee7}
+        .links a.active{color:#0b5ee7;border-bottom-color:#0b5ee7}
+        html[data-theme="dark"] body .pagebar .links a.active{color:#60a5fa;border-bottom-color:#3b82f6}
+        .hero{position:relative;overflow:hidden;padding:clamp(64px,9vw,118px) 5% 90px;background:radial-gradient(circle at 82% 20%,rgba(37,99,235,.15),transparent 26%),linear-gradient(135deg,#fff 0%,#f1f6ff 100%)}
+        .hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+        .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #bfdbfe;border-radius:999px;color:#1d4ed8;background:#eff6ff;font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:22px}
+        .eyebrow:before{content:'';width:7px;height:7px;background:#2563eb;border-radius:50%}
+        .hero h2{font-size:clamp(2.4rem,5vw,4.55rem);line-height:1.08;letter-spacing:-.055em;max-width:780px;margin-bottom:24px;font-weight:800}
+        .hero h2 span{color:#2563eb}.hero-copy{font-size:1.06rem;color:#475569;max-width:650px;margin-bottom:30px}
+        .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{min-height:48px;padding:13px 20px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:750;font-size:.92rem;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:#2563eb;color:#fff;box-shadow:0 10px 22px rgba(37,99,235,.18)}.btn-secondary{background:#fff;color:#1e293b;border:1px solid #dbe3ef}
+        .hero-visual{min-height:390px;position:relative;display:grid;place-items:center}.visual-orb{position:absolute;width:300px;height:300px;border-radius:50%;background:linear-gradient(140deg,#dbeafe,#eff6ff 58%,#fff);border:1px solid #dbeafe}.visual-card{position:relative;width:min(100%,360px);padding:24px;border:1px solid rgba(203,213,225,.85);border-radius:24px;background:rgba(255,255,255,.9);box-shadow:0 24px 65px rgba(15,23,42,.12);backdrop-filter:blur(16px);transform:rotate(-2deg)}.visual-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.mini-label{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#64748b}.visual-cap{width:44px;height:44px;display:grid;place-items:center;background:#eff6ff;border-radius:14px;font-size:22px}.visual-row{display:flex;align-items:center;gap:13px;padding:13px 0;border-top:1px solid #eef2f7}.visual-icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#f1f5f9;font-size:21px;flex-shrink:0}.visual-line{height:8px;border-radius:999px;background:#e2e8f0;margin:7px 0}.visual-line.long{width:155px}.visual-line.short{width:95px}.visual-tag{font-size:.7rem;padding:5px 8px;border-radius:999px;background:#dcfce7;color:#166534;margin-left:auto;font-weight:800}
+        .section{max-width:1180px;margin:auto;padding:84px 5%}.section-heading{max-width:700px;margin-bottom:34px}.section-kicker{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2563eb;margin-bottom:10px}.section h2{font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.18;letter-spacing:-.035em;margin-bottom:15px}.section-heading p{font-size:1rem;color:var(--about-muted)}
+        .mission-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.info-card{padding:30px;border:1px solid var(--about-border);border-radius:22px;background:var(--about-card);box-shadow:0 8px 30px rgba(15,23,42,.035)}.info-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:#eff6ff;font-size:25px;margin-bottom:23px}.info-card h3{font-size:1.22rem;margin-bottom:10px}.info-card p{color:var(--about-muted);font-size:.96rem}
+        .how-section{max-width:none;background:#fff;border-top:1px solid #edf2f7;border-bottom:1px solid #edf2f7}.how-inner{max-width:1180px;margin:auto;padding:84px 5%}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.feature-card{padding:25px 24px;border:1px solid var(--about-border);border-radius:19px;background:#fff;transition:transform .2s,box-shadow .2s}.feature-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(15,23,42,.07)}.feature-card .num{font-size:.78rem;color:#2563eb;font-weight:800;letter-spacing:.08em}.feature-card h3{margin:15px 0 9px;font-size:1.05rem}.feature-card p{color:var(--about-muted);font-size:.9rem}
+        .values{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}.values-copy p{color:var(--about-muted)}.values-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.value-item{padding:18px;border:1px solid var(--about-border);border-radius:15px;background:var(--about-card);display:flex;gap:12px;align-items:flex-start}.value-item .check{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:#dcfce7;color:#15803d;font-weight:900;flex-shrink:0}.value-item strong{display:block;margin-bottom:3px}.value-item span{color:var(--about-muted);font-size:.85rem}
+        .closing{max-width:1180px;padding:0 5% 82px;margin:auto}.closing-card{position:relative;overflow:hidden;padding:clamp(28px,5vw,54px);border-radius:26px;background:linear-gradient(120deg,#112340,#1d4ed8);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:28px}.closing-card:after{content:'';position:absolute;right:-65px;top:-105px;width:280px;height:280px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 78px rgba(255,255,255,.025)}.closing-copy{max-width:680px;position:relative;z-index:1}.closing h2{font-size:clamp(1.7rem,3vw,2.45rem);line-height:1.18;letter-spacing:-.035em;margin-bottom:12px}.closing p{color:#dbeafe}.closing .btn{position:relative;z-index:1;background:#fff;color:#1d4ed8;white-space:nowrap}
+        footer{padding:25px 5%;background:#0b1423;color:#94a3b8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem}footer strong{color:#fff}
+        @media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:15px}.hero-visual{min-height:320px}.visual-orb{width:245px;height:245px}.mission-grid,.values{grid-template-columns:1fr}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.values{gap:28px}}
+        @media(max-width:560px){.hero{padding-top:58px}.hero-visual{min-height:290px}.visual-card{max-width:315px;padding:19px}.section,.how-inner{padding-top:62px;padding-bottom:62px}.feature-grid,.values-list{grid-template-columns:1fr}.closing-card{align-items:flex-start;flex-direction:column}.closing .btn{white-space:normal;width:100%}}
+    
+    .support-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:20px auto 56px;width:min(1120px,90%);padding:clamp(22px,4vw,38px);border:1px solid var(--border,#e2e8f0);border-radius:20px;background:#fff;box-shadow:0 14px 38px rgba(15,23,42,.06)}.support-cta h2{font-size:clamp(1.4rem,3vw,2rem);margin:8px 0}.support-cta p{color:#64748b;max-width:640px;line-height:1.7}.support-eyebrow{color:#2563eb;font-weight:800;letter-spacing:.12em;font-size:.74rem}.support-button{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:13px 17px;background:#2563eb;color:#fff!important;border-radius:11px;text-decoration:none;font-weight:800}.support-footer-link{color:#bfdbfe!important;font-weight:700;text-decoration:none}html[data-theme=dark] .support-cta{background:#111c2d!important;border-color:#2b3a50!important;color:#e5edf7!important}html[data-theme=dark] .support-cta p{color:#a7b4c7!important}@media(max-width:700px){.support-cta{align-items:flex-start;flex-direction:column}}
+        .contact-section{background:#eef5ff;border-top:1px solid #dce8f8}.contact-inner{max-width:1180px;margin:auto;padding:72px 5%;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}.contact-copy h2{font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.18;margin:10px 0 14px}.contact-copy p{color:#52627a;max-width:430px}.contact-email{display:inline-block;margin-top:16px;color:#1d4ed8;font-weight:800;text-decoration:underline;text-underline-offset:3px}.telegram-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;margin-top:20px;padding:11px 16px;border-radius:9px;background:#1689c9;color:#fff;font-weight:800}.telegram-button:hover{background:#0877b4}.contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.contact-field{display:flex;flex-direction:column;gap:7px}.contact-field-full{grid-column:1/-1}.contact-field label{font-size:.84rem;font-weight:750;color:#334155}.contact-field input,.contact-field textarea{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:#121c2d;font:inherit;font-size:.92rem}.contact-field textarea{min-height:132px;resize:vertical}.contact-field input:focus,.contact-field textarea:focus{outline:3px solid rgba(37,99,235,.2);border-color:#2563eb}.contact-submit{justify-self:start;min-height:46px;padding:11px 17px;border:0;border-radius:9px;background:#2563eb;color:#fff;font:inherit;font-weight:800;cursor:pointer}.contact-submit:hover{background:#1d4ed8}.contact-note{grid-column:1/-1;color:#64748b;font-size:.82rem}html[data-theme=dark] .contact-section{background:#101b2c!important;border-color:#26364d!important}html[data-theme=dark] .contact-copy p,html[data-theme=dark] .contact-note{color:#a7b4c7!important}html[data-theme=dark] .contact-field label{color:#dbe5f2!important}html[data-theme=dark] .contact-field input,html[data-theme=dark] .contact-field textarea{background:#172438!important;border-color:#3a4b64!important;color:#e5edf7!important}html[data-theme=dark] .contact-email{color:#93c5fd!important}@media(max-width:760px){.contact-inner{grid-template-columns:1fr;gap:28px;padding-top:58px;padding-bottom:58px}}@media(max-width:520px){.contact-form{grid-template-columns:1fr}.contact-field-full,.contact-note{grid-column:auto}.contact-submit{width:100%}}
+</style>
+    <link rel="stylesheet" href="assets/youruni-global.css">
+</head>
+<body>
+    <nav class="pagebar" aria-label="Main navigation">
+        <a class="brand-link" href="index.php" aria-label="YourUni home">
+            <div class="homepage">
+                <div class="logo" aria-hidden="true">🎓</div>
+                <div class="title">
+                    <h1>Your<span>Uni</span></h1>
+                    <p data-i18n="tagline">Explore Myanmar's Universities</p>
+                </div>
+            </div>
+        </a>
+        <div class="links">
+            <a href="index.php" data-i18n="nav.home">Home</a>
+            <a href="Universities.php" data-i18n="nav.universities">Universities</a>
+            <a href="opportunities.php" data-i18n="nav.opportunities">Opportunities</a>
+            <a href="About.html" class="active" aria-current="page" data-i18n="nav.about">About Us</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="eyebrow" data-i18n="about.eyebrow">ABOUT YOURUNI</div>
+                <h2>About YourUni</h2>
+                <p class="hero-copy">A directory of Myanmar's universities, study fields, and campus information.</p>
+                <div class="hero-actions">
+                    <a href="Universities.php" class="btn btn-primary" data-i18n="about.exploreButton">Explore universities <span aria-hidden="true">→</span></a>
+                    <a href="opportunities.php" class="btn btn-secondary" data-i18n="about.fieldsButton">Discover study fields</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="how-section">
+            <div class="how-inner">
+                <div class="section-heading">
+                    <div class="section-kicker" data-i18n="about.howKicker">YOURUNI DIRECTORY</div>
+                    <h2 data-i18n="about.howTitle">Start with what matters to you.</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card"><span class="num">01 / DIRECTORY</span><h3 data-i18n="about.featureOneTitle">Browse campuses</h3><p data-i18n="about.featureOneCopy">Search by name, region, or field.</p></article>
+                    <article class="feature-card"><span class="num">02 / FIELDS</span><h3 data-i18n="about.featureTwoTitle">Explore study areas</h3><p data-i18n="about.featureTwoCopy">Find related universities and career paths.</p></article>
+                    <article class="feature-card"><span class="num">03 / COMPARE</span><h3 data-i18n="about.featureThreeTitle">Review your options</h3><p data-i18n="about.featureThreeCopy">Compare campuses, then confirm admissions with official sources.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="contact-inner">
+                <div class="contact-copy">
+                    <span class="section-kicker">WE'RE HERE TO HELP</span>
+                    <h2 id="contact-title">Questions about YourUni?</h2>
+                    <p>Our website is still in development and some of the informations are without a doubt, wrong.Therefore, contact us to provide the needed informations please.</p>
+                    <a class="telegram-button" href="https://t.me/lwinbhonemyat168" target="_blank" rel="noopener noreferrer">Message us on Telegram <span aria-hidden="true">↗</span></a>
+                    <br>
+                    <a class="contact-email" href="mailto:lwinbhone147@gmail.com">Or email lwinbhone147@gmail.com</a>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="contact-field">
+                        <label for="contact-name">Your name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-email">Your email</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    </div>
+                    <div class="contact-field contact-field-full">
+                        <label for="contact-message">How can we help?</label>
+                        <textarea id="contact-message" name="message" maxlength="1500" required></textarea>
+                    </div>
+                    <button class="contact-submit" type="submit">Prepare email <span aria-hidden="true">→</span></button>
+                    <p class="contact-note">This form opens your default email app. Your message is only sent when you press Send there.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <section class="about-donate" aria-label="Support YourUni">
+        <div>
+            <span class="about-donate-label" data-i18n="donate.homeEyebrow">SUPPORTING YOURUNI</span>
+            <h2 data-i18n="donate.homeTitle">Help keep YourUni available to students.</h2>
+        </div>
+        <a href="donate.php" class="about-donate-button" data-i18n="donate.cta">Donate Us</a>
+    </section>
+    <footer><span><strong>YourUni</strong> · <span data-i18n="tagline">Explore Myanmar's Universities</span></span><span data-i18n="about.footer">Explore thoughtfully. Verify official admission details.</span><a href="donate.php" class="support-footer-link" data-i18n="donate.cta">Donate Us</a></footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = event.currentTarget;
+            const name = form.elements.name.value.trim();
+            const email = form.elements.email.value.trim();
+            const message = form.elements.message.value.trim();
+            const subject = 'YourUni question from ' + name;
+            const body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+            window.location.href = 'mailto:lwinbhone147@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+    </script>
+    <script src="assets/youruni-global.js" defer></script>
+</body>
+</html>
